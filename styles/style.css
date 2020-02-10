@@ -1,19 +1,16 @@
-/* @import "./buttons.css"; */
+@import "./buttons.css";
 
 :root {
   /*
-  Variables in CSS should be declared within a CSS selector that defines its scope. For a global scope you can use either the :root or the body selector.
+  Variables in CSS are called CUSTOM PROPERTIES and should be declared within a CSS selector that defines its scope. For a global scope you can use either the :root or the body selector.
   The variable name must begin with two dashes (--) and is case sensitive
   */
-
-  /* --primary-color: rgb(187, 24, 146); */
-
+  --primary: rgb(211, 7, 183);
   --accent-color: rgb(54, 77, 78);
   --accent-color-transparent: rgba(54, 77, 78, .1);
   --text-light: rgb(235, 235, 235);
   --text-dark: rgb(15, 15, 15);
 }
-
 
 body {
   /* default page properties */
@@ -30,7 +27,7 @@ body {
 nav {
   margin: 0px;
   padding: .5rem;
-  background-color: rgb(187, 24, 146);
+  background-color: var(--primary);
   color: var(--text-light);
   border-bottom: 8px solid var(--accent-color);
 }
@@ -66,12 +63,12 @@ header {
 }
 
 h1 {
-  border-bottom: 4px dotted rgb(187, 24, 146);
+  border-bottom: 4px dotted var(--primary);
   margin-bottom: 0rem;
 }
 
 .icon {
-  color: rgb(187, 24, 146)
+  color: var(--primary)
 }
 
 article {
@@ -108,7 +105,7 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: rgb(187, 24, 146);
+  color: var(--primary);
 }
 
 footer a:hover {
