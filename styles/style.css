@@ -1,0 +1,118 @@
+/* @import "./buttons.css"; */
+
+:root {
+  /*
+  Variables in CSS should be declared within a CSS selector that defines its scope. For a global scope you can use either the :root or the body selector.
+  The variable name must begin with two dashes (--) and is case sensitive
+  */
+
+  /* --primary-color: rgb(187, 24, 146); */
+
+  --accent-color: rgb(54, 77, 78);
+  --accent-color-transparent: rgba(54, 77, 78, .1);
+  --text-light: rgb(235, 235, 235);
+  --text-dark: rgb(15, 15, 15);
+}
+
+
+body {
+  /* default page properties */
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px;
+  color: var(--text-dark);
+}
+
+
+/* Begin Nav Styles */
+
+nav {
+  margin: 0px;
+  padding: .5rem;
+  background-color: rgb(187, 24, 146);
+  color: var(--text-light);
+  border-bottom: 8px solid var(--accent-color);
+}
+
+nav>ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  font-size: 1.25rem;
+}
+
+nav>ul>li a {
+  padding: 2rem;
+  text-decoration: none;
+  color: var(--text-light);
+}
+
+nav>ul>li a:hover {
+  background-color: var(--accent-color);
+}
+
+/* End Nav Styles */
+
+/* Begin Main Content Styles */
+
+.main_container {
+  height: 100%;
+  padding: 1em;
+}
+
+header {
+  font-size: 2rem;
+}
+
+h1 {
+  border-bottom: 4px dotted rgb(187, 24, 146);
+  margin-bottom: 0rem;
+}
+
+.icon {
+  color: rgb(187, 24, 146)
+}
+
+article {
+  margin: 1em;
+}
+
+article>section {
+  padding: .5em;
+  color: var(--accent-color);
+  background-color: var(--accent-color-transparent);
+}
+
+article>section>p {
+  margin: .3rem;
+  padding: .3rem .8rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.indent {
+  padding-left: 2em;
+}
+
+/* End Main Content Styles */
+
+
+/* Begin Footer Styles */
+
+footer {
+  text-align: center;
+  padding: 2em;
+  background-color: var(--accent-color);
+  color: var(--text-light);
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(187, 24, 146);
+}
+
+footer a:hover {
+  color: var(--text-light);
+}
+
+/* End Footer Styles */

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Variables Demo</title>
+  <link rel="stylesheet" type="text/css" href="./styles/style.css">
+
+</head>
+
+<body>
+
+  <!-- Begin Nav -->
+  <nav>
+    <!-- Begin Nav Links -->
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Fonts</a></li>
+      <li><a href="#">Sizes</a></li>
+      <li><a href="#">Colors</a></li>
+    </ul>
+    <!-- End Nav Links -->
+  </nav>
+  <!-- End Nav -->
+
+  <!-- Begin Main Container -->
+  <section class="main_container">
+
+    <header>
+      <h1><span class="icon">»</span> CSS Variables Demo</h1>
+    </header>
+    <button class="btn">Button One</button>
+    <button class="btn">Button Two</button>
+
+    <article>
+      <header>Basic Usage</header>
+      <p><strong>style.css -</strong> declare the custom property</p>
+      <section>
+        <p>:root {</p>
+        <p class="indent">--primary-bg-color: rgb(184, 23, 144);</p>
+        <p>}</p>
+
+      </section>
+      <p><strong>style.css -</strong> apply the custom property to whichever elements you want</p>
+      <section>
+        <p>nav {</p>
+        <p class="indent">background-color: var(--primary-bg-color);</p>
+        <p>}</p>
+      </section>
+
+    </article>
+
+
+    <article>
+      <header>Importing Other Stylesheets</header>
+      <p><strong>buttons.css -</strong> additional style sheet <em>(notice the use of the global variable styles)</em>
+      </p>
+      <section>
+        <p>:root {</p>
+        <p class="indent"> --btn-font-family: monospace;</p>
+        <p>}</p>
+        <p>button {</p>
+        <p class="indent">font-family: var(--btn-font-family);</p>
+        <p class="indent">background-color: var(--accent-color);</p>
+        <p class="indent">color: var(--primary-color-text);</p>
+        <p>}</p>
+      </section>
+      <p><strong>style.css -</strong> import button.css into style.css</p>
+      <section>
+        <p>@import "./buttons.css";</p>
+      </section>
+
+    </article>
+
+
+  </section>
+  <!-- End Main Container -->
+
+  <!-- Begin Footer -->
+  <footer><a href="#">Privacy</a> | <a href="#">Terms and Conditions</a></footer>
+  <!-- End Footer -->
+
+  <script src="./scripts/main.js"></script>
+</body>
+
+</html>
